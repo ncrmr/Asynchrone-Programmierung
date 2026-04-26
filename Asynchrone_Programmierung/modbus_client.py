@@ -1,6 +1,7 @@
 import asyncio
 import logging
 
+from pymodbus import client
 from pymodbus.client import AsyncModbusTcpClient
 from pymodbus.exceptions import ModbusException
 
@@ -11,25 +12,19 @@ class ModbusClient:
     def __init__(self, host:str, port: int, input_count: int = 8, output_count: int = 8):
         self.host = host
         self.port = port
-        self.input_count = input_count
-        self.output_count = output_count
 
-        self.input_start = 0
-        self.input_count = input_count
-        self.output_start = 0
-        self.output_count = output_count
-
-        self.client = AsyncModbusTcpClient(host=host, port=port)
+        self.client = None
         self.connected = False
 
     async def connect(self) -> bool:
         # Connect to Modbus client
         if not self.connected:
             try:
+                self.client = AsyncModbusTcpClient(host=self.host, port=self.port)
+
                 if await self.client.connect():
                     self.connected = True
                     logger.info(f"Connected to Modbus client at {self.host}:{self.port}")
-                    await self.read_inputs()
                     return True
                 else:
                     raise ModbusException("Connection failed")
@@ -57,46 +52,63 @@ class ModbusClient:
         else:
             logger.info("Already disconnected from Modbus client")
             return True
-        
-    async def ensure_connected(self) -> bool:
-        pass
 
-    async def read_inputs(self):
+    async def read_input(self, input_bit: int = 0):
         # Read input states from Modbus client
         if not self.connected:
             logger.warning("Cannot read inputs - Modbus client not connected")
             return None
         try:
-            result = await self.client.read_coils(self.input_start, self.input_count, slave = 1)
+            result = await self.client.read_discrete_inputs(address = input_bit, count = 1, device_id = 1)
             if result.isError():
                 logger.error(f"Error reading inputs: {results}")
                 return None
 
-            input_states = list(result.bits[:self.input_count])
-            return input_states
+            return bool(result.bits[input_bit])
         
         except Exception as err:
             logger.error(f"Error reading inputs: {err}")
             self.connected = False
             return None
         
-    async def write_outputs(self, output_states:list):
-        # Write output states to Modbus client
+    async def write_output(self, output_bit: int = 0, val: bool = False):
+        # Write a single output state to Modbus client
         if not self.connected:
             logger.warning("Cannot write outputs - Modbus client not connected")
             return None
         try:
-            result = await self.client.write_coils(self.output_start, output_states, slave = 1)
+            result = await self.client.write_coil(address = output_bit, value = val, device_id = 1)
             if result.isError():
                 logger.error(f"Error writing outputs: {result}")
                 return None
             
-            return output_states
+            return True
             
         except Exception as err:
             logger.error(f"Error writing outputs: {err}")
             self.connected = False
             return None
         
-
+    async def modbus_client_task(self, interval: float = 1.0):
+        # Continuous task for monitoring Modbus connection and reading inputs
+        await self.connect()
+        
+        try:
+            while True:
+                if not self.connected:
+                    logger.info("Attempting to reconnect to Modbus client...")
+                    await self.connect()
+                
+                if self.connected:
+                   pass
+                
+                await asyncio.sleep(interval)
+        
+        except asyncio.CancelledError:
+            logger.info("Modbus client task cancelled")
+            await self.disconnect()
+        
+        except Exception as err:
+            logger.error(f"Unexpected error in modbus_client_task: {err}")
+            await self.disconnect()
         

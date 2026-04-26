@@ -9,12 +9,17 @@ logger = logging.getLogger(__name__)
 
 class DiscordBotHandler:
 
-    def __init__(self, token: str, command_prefix: str = "!"):
+    def __init__(self, token: str, channel: int, command_prefix: str = "!"):
         self.token = token
+        self.channel_id = channel
         self.command_prefix = command_prefix
+
+        intents = discord.Intents.default()
+        intents.message_content = True  # wichtig für Commands!
+
         self.bot = commands.Bot(
             command_prefix=command_prefix,
-            intents=discord.Intents.default(),
+            intents=intents,
         )
 
         # Register event handlers
@@ -30,6 +35,8 @@ class DiscordBotHandler:
 
     async def on_ready(self):
         print("Ich bin jetzt online")
+        channel = self.bot.get_channel(self.channel_id)
+        await channel.send("🟢 Ich bin jetzt online!")
 
     async def discord_bot_task(self):
         async with self.bot:
@@ -37,4 +44,3 @@ class DiscordBotHandler:
 
     async def stop(self):
         await self.bot.close()
-

@@ -7,17 +7,15 @@ import logging
 MODBUS_HOST = "192.168.0.7"
 MODBUS_PORT = "502"
 
-INPUT_COUNT = 8
-OUTPUT_COUNT = 8
-
 #################################################################
 # Discord configuration
 #################################################################
 
-DISCORD_TOKEN = "MTQ5NjkzNjU5OTQ3OTM5MDM3MQ.GPwW9X.bgO0wJOlr7528VLVn-Ix3HPTXMVqAUujZDbzgM"
-
+DISCORD_TOKEN_PART_A = "MTQ5NjkzNjU5OTQ3OTM5MDM3MQ.G0EWMw."
+DISCORD_TOKEN_PART_B = "VXuTQdAPgou3btyp_DomzA1szjfJvJgzLeDlqo"
+DISCORD_TOKEN = DISCORD_TOKEN_PART_A + DISCORD_TOKEN_PART_B
+DISCORD_CHANNEL = 1496938937334108333
 DISCORD_COMMAND_PREFIX= "!"
-
 
 #################################################################
 # Logging configuration

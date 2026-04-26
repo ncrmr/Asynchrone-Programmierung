@@ -25,11 +25,11 @@ class AsyncSystem:
         self.modbus_client = ModbusClient(
             host = config.MODBUS_HOST,
             port = config.MODBUS_PORT,
-            input_count = config.INPUT_COUNT,
-            output_count = config.OUTPUT_COUNT
         )
         self.discord_bot = DiscordBotHandler(
-            token = config.DISCORD_TOKEN
+            token = config.DISCORD_TOKEN,
+            channel = config.DISCORD_CHANNEL,
+            command_prefix = config.DISCORD_COMMAND_PREFIX,
         )
         self.tasks = []
         self.running = False
