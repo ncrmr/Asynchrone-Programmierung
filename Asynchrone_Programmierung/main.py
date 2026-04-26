@@ -47,7 +47,7 @@ class AsyncSystem:
                 name = "modbus_client"
             )
             discord_task = asyncio.create_task(
-                self.discord_bot.discord_bot(),
+                self.discord_bot.discord_bot_task(),
                 name = "discord_bot"
             )
 
@@ -84,7 +84,6 @@ class AsyncSystem:
         self.modbus_client.stop()
         await self.modbus_client.disconnect()
 
-        self.discord_bot.stop()
         await self.discord_bot.stop()
 
         logger.info("=" * 60)
