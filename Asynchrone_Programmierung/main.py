@@ -30,7 +30,9 @@ class AsyncSystem:
             token = config.DISCORD_TOKEN,
             channel = config.DISCORD_CHANNEL,
             command_prefix = config.DISCORD_COMMAND_PREFIX,
+            modbus_client = self.modbus_client,
         )
+        self.modbus_client.set_input_change_callback(self.discord_bot.notify_input_change)
         self.tasks = []
         self.running = False
 
@@ -46,7 +48,7 @@ class AsyncSystem:
                 self.modbus_client.modbus_client_task(),
                 name = "modbus_client"
             )
-            discord_task = asyncio.create_task(
+            discord_task = asyncio.create_task(  
                 self.discord_bot.discord_bot_task(),
                 name = "discord_bot"
             )
@@ -90,7 +92,13 @@ class AsyncSystem:
         logger.info("System shutdown complete")
         logger.info("=" * 60)
 
-    async def main():
-        system = AsyncSystem()
+
+async def main():
+    system = AsyncSystem()
+    await system.run()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
 
 

@@ -1,0 +1,562 @@
+2026-04-27 22:10:27,388 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:10:27,389 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:10:27,390 - __main__ - INFO - ============================================================
+2026-04-27 22:10:27,390 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:10:27,390 - __main__ - INFO - ============================================================
+2026-04-27 22:10:27,391 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:10:27,391 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:10:27,392 - discord.client - INFO - logging in using static token
+2026-04-27 22:10:27,508 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:10:28,513 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 7014673449e0f6fe0a6bdae60cde78a3).
+2026-04-27 22:10:30,515 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:10:36,041 - modbus_client - ERROR - Error writing outputs: ExceptionResponse(dev_id=1, function_code=133, exception_code=4)
+2026-04-27 22:10:46,903 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Connection] Not connected[AsyncModbusTcpClient 192.168.0.7:502]
+2026-04-27 22:10:46,904 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:10:47,914 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:10:49,451 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:10:50,917 - pymodbus.logging - WARNING - Repeating....
+2026-04-27 22:10:51,019 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:10:52,035 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:10:52,669 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:10:55,051 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:10:55,167 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:10:56,084 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:10:56,169 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:10:59,183 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:10:59,293 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:10:59,901 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:00,300 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:03,302 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:03,417 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:11:04,418 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:04,534 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:07,436 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:07,545 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:11:08,549 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:10,752 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:11,552 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:11,667 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:11:12,684 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:12,800 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:11:23,202 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:11:23,203 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:11:24,218 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:24,249 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=3 but got id=1, Skipping.
+>>>>> recv: 0x0 0xe 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0xf 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0xf 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0x10 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x10 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0x11 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x11 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0x12 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x12 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0x13 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x13 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0x14 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x14 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x0 extra data: 
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> Repeating....
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> send: 0x0 0x2 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> Repeating....
+>>>>> send: 0x0 0x3 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+2026-04-27 22:11:24,333 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:11:27,769 - modbus_client - ERROR - Error writing outputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:11:29,350 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:11:29,351 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:11:30,352 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:30,385 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:11:30,397 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=3 but got id=2, Skipping.
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> send: 0x0 0x3 0x0 0x0 0x0 0x6 0x1 0x5 0x0 0x0 0xff 0x0
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> recv: 0x0 0x2 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+2026-04-27 22:11:30,482 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:11:30,539 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:11:30,546 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=3 but got id=2, Skipping.
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x2 0x0 0x0 0x0 0x1
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+>>>>> Repeating....
+>>>>> recv: 0x0 0x2 0x0 0x0 0x0 0x4 0x1 0x2 0x1 0x1 extra data: 
+2026-04-27 22:11:36,550 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:11:36,551 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:11:37,552 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:40,568 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:11:40,680 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:11:41,687 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:44,701 - pymodbus.logging - WARNING - Repeating....
+2026-04-27 22:11:44,804 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:11:45,818 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:11:46,889 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:11:46,904 - pymodbus.logging - WARNING - Repeating....
+2026-04-27 22:11:46,913 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:11:46,920 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:11:46,984 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:11:54,897 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:11:54,897 - modbus_client - ERROR - Error disconnecting from Modbus client: 'NoneType' object can't be awaited
+2026-04-27 22:11:54,899 - __main__ - INFO - System cancelled
+2026-04-27 22:11:54,899 - __main__ - INFO - Shutting down system
+2026-04-27 22:22:13,351 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:22:13,352 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:22:13,353 - __main__ - INFO - ============================================================
+2026-04-27 22:22:13,353 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:22:13,353 - __main__ - INFO - ============================================================
+2026-04-27 22:22:13,354 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:22:13,354 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:22:13,355 - discord.client - INFO - logging in using static token
+2026-04-27 22:22:14,837 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: f6167dbec6dcb350e108a8649dea2c9b).
+2026-04-27 22:22:16,359 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:22:16,464 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:22:16,466 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:22:16,846 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:22:17,609 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:22:17,660 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:22:24,934 - modbus_client - ERROR - Error writing outputs: ExceptionResponse(dev_id=1, function_code=134, exception_code=2)
+2026-04-27 22:25:50,320 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:25:50,321 - modbus_client - ERROR - Error disconnecting from Modbus client: 'NoneType' object can't be awaited
+2026-04-27 22:25:50,323 - __main__ - INFO - System cancelled
+2026-04-27 22:25:50,323 - __main__ - INFO - Shutting down system
+2026-04-27 22:26:07,395 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:26:07,396 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:26:07,397 - __main__ - INFO - ============================================================
+2026-04-27 22:26:07,397 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:26:07,398 - __main__ - INFO - ============================================================
+2026-04-27 22:26:07,398 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:26:07,398 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:26:07,399 - discord.client - INFO - logging in using static token
+2026-04-27 22:26:10,046 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 099ea3110b975cb1b24439799be69ce4).
+2026-04-27 22:26:10,416 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:26:10,517 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:26:10,518 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:26:12,049 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:26:13,533 - pymodbus.logging - WARNING - Repeating....
+2026-04-27 22:26:13,650 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:26:14,664 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:26:14,782 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:26:19,798 - modbus_client - WARNING - Error disabling watchdog: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:24,799 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:24,800 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:26:25,350 - modbus_client - WARNING - Cannot write outputs - Modbus client not connected
+2026-04-27 22:26:25,802 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:26:25,831 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=2 but got id=1, Skipping.
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0
+>>>>> Repeating....
+>>>>> send: 0x0 0x2 0x0 0x0 0x0 0x6 0x1 0x3 0x8 0x0 0x0 0x1
+>>>>> Repeating....
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0 extra data: 
+2026-04-27 22:26:25,916 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:26:30,934 - modbus_client - WARNING - Error disabling watchdog: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:35,937 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:35,937 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:26:36,948 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:26:36,980 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=2 but got id=1, Skipping.
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0
+>>>>> Repeating....
+>>>>> send: 0x0 0x2 0x0 0x0 0x0 0x6 0x1 0x3 0x8 0x0 0x0 0x1
+>>>>> Repeating....
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0 extra data: 
+2026-04-27 22:26:36,988 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=2 but got id=1, Skipping.
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0 extra data: 
+2026-04-27 22:26:37,079 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:26:42,083 - modbus_client - WARNING - Error disabling watchdog: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:47,099 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:47,100 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:26:48,108 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:26:48,142 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=2 but got id=1, Skipping.
+>>>>> send: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0
+>>>>> Repeating....
+>>>>> send: 0x0 0x2 0x0 0x0 0x0 0x6 0x1 0x3 0x8 0x0 0x0 0x1
+>>>>> Repeating....
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0 extra data: 
+2026-04-27 22:26:48,152 - pymodbus.logging - ERROR - ERROR: request ask for transaction_id=2 but got id=1, Skipping.
+>>>>> recv: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x6 0x11 0x20 0x0 0x0 extra data: 
+2026-04-27 22:26:48,162 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:26:48,234 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:26:52,105 - modbus_client - WARNING - Error disabling watchdog: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:52,904 - modbus_client - ERROR - Error reading inputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:26:52,904 - modbus_client - WARNING - Ping failed, connection may be lost
+2026-04-27 22:26:53,380 - __main__ - INFO - Shutting down system
+2026-04-27 22:26:53,381 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<main() done, defined at c:\Users\nico-\OneDrive - hochschule-trier.de\Github\Asynchrone_Programmierung\main.py:95> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\tasks.py:810]>
+2026-04-27 22:26:53,382 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='modbus_client' coro=<ModbusClient.modbus_client_task() running at c:\Users\nico-\OneDrive - hochschule-trier.de\Github\Asynchrone_Programmierung\modbus_client.py:149> wait_for=<Future cancelled> cb=[gather.<locals>._done_callback() at C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\tasks.py:810, gather.<locals>._done_callback() at C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\tasks.py:810]>
+2026-04-27 22:30:31,423 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:30:31,424 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:30:31,425 - __main__ - INFO - ============================================================
+2026-04-27 22:30:31,426 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:30:31,426 - __main__ - INFO - ============================================================
+2026-04-27 22:30:31,427 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:30:31,427 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:30:31,428 - discord.client - INFO - logging in using static token
+2026-04-27 22:30:32,540 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 9c51662e1a76af660a9d76c1496a9577).
+2026-04-27 22:30:34,435 - pymodbus.logging - WARNING - Failed to connect 
+2026-04-27 22:30:34,538 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:30:34,539 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:30:34,554 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:30:37,552 - pymodbus.logging - WARNING - Repeating....
+2026-04-27 22:30:37,668 - modbus_client - ERROR - Failed to connect to Modbus client: Modbus Error: Connection failed
+2026-04-27 22:30:38,670 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-27 22:30:38,787 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:30:38,803 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:30:48,189 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:48,984 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:50,017 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:51,051 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:52,081 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:53,113 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:54,149 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:55,184 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:56,216 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:57,250 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:58,282 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:30:59,317 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:00,353 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:01,384 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:02,418 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:03,452 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:04,484 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:05,517 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:06,551 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:07,579 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:08,619 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:09,652 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:10,682 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:10,848 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:11,719 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:12,750 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:13,787 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:14,818 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:15,854 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:16,892 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:17,921 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:18,949 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:19,447 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:19,985 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:21,016 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:22,052 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:23,091 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:24,127 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:25,164 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:26,198 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:26,816 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:31:26,816 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:31:26,818 - __main__ - INFO - System cancelled
+2026-04-27 22:31:26,818 - __main__ - INFO - Shutting down system
+2026-04-27 22:31:29,596 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:31:29,596 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:31:29,597 - __main__ - INFO - ============================================================
+2026-04-27 22:31:29,597 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:31:29,598 - __main__ - INFO - ============================================================
+2026-04-27 22:31:29,598 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:31:29,598 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:31:29,599 - discord.client - INFO - logging in using static token
+2026-04-27 22:31:29,718 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:31:29,731 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:31:30,685 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: e4d67b5d0a623ebb35a6b1928a3fac9f).
+2026-04-27 22:31:32,697 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:31:40,212 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:40,967 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:41,998 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:43,036 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:44,068 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:45,102 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:46,132 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:47,166 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:48,195 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:49,237 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:31:49,364 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:50,283 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:51,317 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:52,350 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:31:52,360 - modbus_client - ERROR - Error writing outputs: Modbus Error: [Input/Output] Request cancelled outside library.
+2026-04-27 22:31:52,361 - modbus_client - WARNING - Failed to maintain output 0
+2026-04-27 22:31:52,364 - pymodbus.logging - WARNING - ERROR: received pdu without a corresponding request, IGNORING
+2026-04-27 22:31:52,768 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:31:52,768 - modbus_client - INFO - Already disconnected from Modbus client
+2026-04-27 22:31:52,769 - __main__ - INFO - System cancelled
+2026-04-27 22:31:52,769 - __main__ - INFO - Shutting down system
+2026-04-27 22:31:52,769 - asyncio - ERROR - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<main() done, defined at c:\Users\nico-\OneDrive - hochschule-trier.de\Github\Asynchrone_Programmierung\main.py:95> exception=AttributeError("'ModbusClient' object has no attribute 'stop'")>
+Traceback (most recent call last):
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 2019, in _run_once
+    event_list = self._selector.select(timeout)
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\windows_events.py", line 446, in select
+    self._poll(timeout)
+    ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\windows_events.py", line 775, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+  File "C:\Users\nico-\AppData\Local\python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 166, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\nico-\OneDrive - hochschule-trier.de\Github\Asynchrone_Programmierung\main.py", line 97, in main
+    await system.run()
+  File "c:\Users\nico-\OneDrive - hochschule-trier.de\Github\Asynchrone_Programmierung\main.py", line 69, in run
+    await self.shutdown()
+  File "c:\Users\nico-\OneDrive - hochschule-trier.de\Github\Asynchrone_Programmierung\main.py", line 85, in shutdown
+    self.modbus_client.stop()
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModbusClient' object has no attribute 'stop'
+2026-04-27 22:34:22,981 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:34:22,981 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:34:22,982 - __main__ - INFO - ============================================================
+2026-04-27 22:34:22,983 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:34:22,983 - __main__ - INFO - ============================================================
+2026-04-27 22:34:22,983 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:34:22,983 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:34:22,984 - discord.client - INFO - logging in using static token
+2026-04-27 22:34:23,105 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:34:23,119 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:34:24,211 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a641267786320b9a3ac500085cbcc64f).
+2026-04-27 22:34:26,216 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:34:30,955 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:31,288 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:32,322 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:33,353 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:34,386 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:35,419 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:36,452 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:37,486 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:38,519 - modbus_client - INFO - Writing output register 0x800 = 1
+2026-04-27 22:34:38,991 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:39,555 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:40,589 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:41,621 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:42,652 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:43,689 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:44,723 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:45,763 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:46,804 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:47,841 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:48,884 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:49,918 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:50,956 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:52,001 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:53,035 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:54,069 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:55,104 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:56,133 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:57,168 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:58,262 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:34:59,298 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:35:00,329 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:35:01,368 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:35:02,403 - modbus_client - INFO - Writing output register 0x800 = 0
+2026-04-27 22:35:02,545 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:35:02,546 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:35:02,547 - __main__ - INFO - System cancelled
+2026-04-27 22:35:02,547 - __main__ - INFO - Shutting down system
+2026-04-27 22:35:17,503 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:35:17,503 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:35:17,505 - __main__ - INFO - ============================================================
+2026-04-27 22:35:17,505 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:35:17,505 - __main__ - INFO - ============================================================
+2026-04-27 22:35:17,505 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:35:17,506 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:35:17,507 - discord.client - INFO - logging in using static token
+2026-04-27 22:35:17,623 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:35:17,637 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:35:18,612 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a73348c4b8f7a7292e96b8a2666b080b).
+2026-04-27 22:35:20,622 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:39:02,160 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:39:02,165 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:39:02,166 - __main__ - INFO - System cancelled
+2026-04-27 22:39:02,167 - __main__ - INFO - Shutting down system
+2026-04-27 22:39:04,498 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:39:04,498 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:39:04,500 - __main__ - INFO - ============================================================
+2026-04-27 22:39:04,500 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:39:04,500 - __main__ - INFO - ============================================================
+2026-04-27 22:39:04,501 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:39:04,501 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:39:04,502 - discord.client - INFO - logging in using static token
+2026-04-27 22:39:04,627 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:39:04,642 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:39:05,801 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 0db65b866f8a7b6fde74c405e9877fe9).
+2026-04-27 22:39:07,805 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:39:15,358 - discord.ext.commands.bot - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "coil_on" is not found
+2026-04-27 22:39:26,080 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:39:26,080 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:39:26,083 - __main__ - INFO - System cancelled
+2026-04-27 22:39:26,083 - __main__ - INFO - Shutting down system
+2026-04-27 22:40:05,848 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:40:05,848 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:40:05,849 - __main__ - INFO - ============================================================
+2026-04-27 22:40:05,849 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:40:05,850 - __main__ - INFO - ============================================================
+2026-04-27 22:40:05,850 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:40:05,850 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:40:05,851 - discord.client - INFO - logging in using static token
+2026-04-27 22:40:05,973 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:40:05,986 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:40:06,909 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 18b06357dd833b906dfdbc68ba20c05b).
+2026-04-27 22:40:08,928 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:44:04,413 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:44:04,414 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:44:04,416 - __main__ - INFO - System cancelled
+2026-04-27 22:44:04,416 - __main__ - INFO - Shutting down system
+2026-04-27 22:44:12,102 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:44:12,103 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:44:12,105 - __main__ - INFO - ============================================================
+2026-04-27 22:44:12,105 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:44:12,106 - __main__ - INFO - ============================================================
+2026-04-27 22:44:12,106 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:44:12,106 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:44:12,107 - discord.client - INFO - logging in using static token
+2026-04-27 22:44:12,220 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:44:12,233 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:44:13,049 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 4e8878104d18edb4a50198ec524f49f5).
+2026-04-27 22:44:15,061 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:45:51,185 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:45:51,186 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:45:51,187 - __main__ - INFO - System cancelled
+2026-04-27 22:45:51,187 - __main__ - INFO - Shutting down system
+2026-04-27 22:45:59,803 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:45:59,804 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:45:59,806 - __main__ - INFO - ============================================================
+2026-04-27 22:45:59,806 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:45:59,806 - __main__ - INFO - ============================================================
+2026-04-27 22:45:59,806 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:45:59,807 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:45:59,808 - discord.client - INFO - logging in using static token
+2026-04-27 22:45:59,928 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:45:59,942 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:46:00,760 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a48081efa9762ea06f601e719b3dc5b9).
+2026-04-27 22:46:02,767 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:46:10,524 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:11,179 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:12,212 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:13,248 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:14,279 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:15,313 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:16,410 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:17,444 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:18,480 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:19,512 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:20,545 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:21,577 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:22,612 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:23,316 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:23,644 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:23,659 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:24,693 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:24,708 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:25,746 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:25,762 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:26,796 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:26,813 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:27,845 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:27,860 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:28,888 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:28,902 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:29,938 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:29,951 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:30,993 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:31,007 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:32,046 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:32,060 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:33,095 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:33,110 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:34,143 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:34,156 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:35,195 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:35,208 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:36,237 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:36,251 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:37,287 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:37,301 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:38,336 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:38,350 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:39,378 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:39,392 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:40,427 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:40,442 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:41,473 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:41,487 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:42,527 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:42,541 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:43,575 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:43,590 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:44,620 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:44,633 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:45,675 - modbus_client - INFO - Writing output coil 0x802 = True
+2026-04-27 22:46:45,689 - modbus_client - INFO - Writing output coil 0x800 = True
+2026-04-27 22:46:46,219 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:46:46,220 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:46:46,221 - __main__ - INFO - System cancelled
+2026-04-27 22:46:46,221 - __main__ - INFO - Shutting down system
+2026-04-27 22:46:54,292 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:46:54,293 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:46:54,294 - __main__ - INFO - ============================================================
+2026-04-27 22:46:54,294 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:46:54,294 - __main__ - INFO - ============================================================
+2026-04-27 22:46:54,294 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:46:54,295 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:46:54,295 - discord.client - INFO - logging in using static token
+2026-04-27 22:46:54,414 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:46:54,428 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:46:55,313 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: dadac067ac53c7f853a9ae4eb38c6e35).
+2026-04-27 22:46:57,331 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:52:25,261 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:52:25,262 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:52:25,263 - __main__ - INFO - System cancelled
+2026-04-27 22:52:25,264 - __main__ - INFO - Shutting down system
+2026-04-27 22:52:33,011 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:52:33,012 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:52:33,013 - __main__ - INFO - ============================================================
+2026-04-27 22:52:33,014 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:52:33,014 - __main__ - INFO - ============================================================
+2026-04-27 22:52:33,014 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:52:33,014 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:52:33,015 - discord.client - INFO - logging in using static token
+2026-04-27 22:52:33,134 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:52:33,149 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:52:33,955 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3292a5812ab4fd60e9b7229aa3989d8a).
+2026-04-27 22:52:35,967 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:55:52,826 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 22:55:52,827 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 22:55:52,829 - __main__ - INFO - System cancelled
+2026-04-27 22:55:52,829 - __main__ - INFO - Shutting down system
+2026-04-27 22:58:29,392 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-27 22:58:29,393 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-27 22:58:29,394 - __main__ - INFO - ============================================================
+2026-04-27 22:58:29,394 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-27 22:58:29,394 - __main__ - INFO - ============================================================
+2026-04-27 22:58:29,395 - __main__ - INFO - All tasks started successfully
+2026-04-27 22:58:29,395 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-27 22:58:29,396 - discord.client - INFO - logging in using static token
+2026-04-27 22:58:29,508 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-27 22:58:29,523 - modbus_client - INFO - Watchdog disabled
+2026-04-27 22:58:31,141 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 2d263d882e02fc9081e33fa8d0447b84).
+2026-04-27 22:58:33,145 - discord_bot - INFO - Der Bot ist jetzt online
+2026-04-27 22:58:49,051 - modbus_client - INFO - Digital input 0 changed to False
+2026-04-27 22:58:53,502 - modbus_client - INFO - Digital input 0 changed to True
+2026-04-27 22:58:59,987 - modbus_client - INFO - Digital input 0 changed to False
+2026-04-27 22:59:08,701 - modbus_client - INFO - Digital input 0 changed to True
+2026-04-27 22:59:12,116 - modbus_client - INFO - Digital input 0 changed to False
+2026-04-27 22:59:17,787 - modbus_client - INFO - Digital input 0 changed to True
+2026-04-27 23:04:03,984 - discord.ext.commands.bot - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "hallo" is not found
+2026-04-27 23:11:57,123 - modbus_client - INFO - Modbus client task cancelled
+2026-04-27 23:11:57,124 - modbus_client - INFO - Disconnected from Modbus client
+2026-04-27 23:11:57,126 - __main__ - INFO - System cancelled
+2026-04-27 23:11:57,126 - __main__ - INFO - Shutting down system
