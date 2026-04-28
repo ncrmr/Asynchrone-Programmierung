@@ -1,6 +1,6 @@
-import asyncio
-import logging
-import sys
+import asyncio # Bibliotehk für asynchrone Programmierung
+import logging # Bibliothek für Logging, damit wir sehen können, was im Programm passiert
+import sys # Bibliothek für Systemfunktionen, hier z.B. um Log-Ausgaben auf die Konsole zu bringen
 
 import config
 from discord_bot import DiscordBotHandler
