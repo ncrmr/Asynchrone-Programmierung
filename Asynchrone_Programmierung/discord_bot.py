@@ -50,6 +50,7 @@ class DiscordBotHandler:
         async def cmd_led_on(ctx):
             if self.modbus_client:
                 result = await self.modbus_client.write_output(0, True)
+                self.led_state = True
                 if result:
                     await ctx.send("LED eingeschaltet!")
                 else:
@@ -61,6 +62,7 @@ class DiscordBotHandler:
         async def cmd_led_off(ctx):
             if self.modbus_client:
                 result = await self.modbus_client.write_output(0, False)
+                self.led_state = False
                 if result:
                     await ctx.send("LED ausgeschaltet!")
                 else:

@@ -164,9 +164,8 @@ class ModbusClient:
             self.connected = False
             return None
 
-    async def modbus_client_task(self, interval: float = 1.0):
+    async def modbus_client_task(self, interval: float = 0.05):
         # Langer Task, der ständig den Modbus-Zustand prüft und Eingänge liest.
-        await self.connect()
 
         try:
             while True:
@@ -185,7 +184,7 @@ class ModbusClient:
                             self.previous_input_state = current_input
                         elif self.previous_input_state != current_input:
                             # Zustand hat sich geändert, Callback informieren.
-                            logger.info(f"Digital input 0 changed to {current_input}")
+                            #logger.info(f"Digital input 0 changed to {current_input}")
                             self.previous_input_state = current_input
                             if self.input_change_callback:
                                 await self.input_change_callback(0, current_input)
