@@ -15,6 +15,8 @@ class DiscordBotHandler:
         self.command_prefix = command_prefix
         self.modbus_client = modbus_client
         self.channel = None
+        self.led_state = False  # Zustand der LED
+        self.previous_input_state = None  # Vorheriger Zustand des Eingangs
 
         intents = discord.Intents.default()
         intents.message_content = True  # wichtig für Commands!
@@ -57,6 +59,28 @@ class DiscordBotHandler:
             else:
                 await ctx.send("Modbus client nicht verfügbar.")
 
+        @self.bot.command(name="coil_on")
+        async def cmd_coil_on(ctx):
+            if self.modbus_client:
+                result = await self.modbus_client.write_output(1, True)
+                if result:
+                    await ctx.send("Schütz eingeschaltet!")
+                else:
+                    await ctx.send("Fehler beim Einschalten des Schützes.")
+            else:
+                await ctx.send("Modbus client nicht verfügbar.")
+
+        @self.bot.command(name="coil_off")
+        async def cmd_coil_off(ctx):
+            if self.modbus_client:
+                result = await self.modbus_client.write_output(1, False)
+                if result:
+                    await ctx.send("Schütz ausgeschaltet!")
+                else:
+                    await ctx.send("Fehler beim Ausschalten des Schützes.")
+            else:
+                await ctx.send("Modbus client nicht verfügbar.")
+
     async def on_ready(self):
         logger.info("Der Bot ist jetzt online")
         self.channel = self.bot.get_channel(self.channel_id)
@@ -66,6 +90,8 @@ class DiscordBotHandler:
             f"\n{self.command_prefix}ping - Testet die Verbindung zum Bot" \
             f"\n{self.command_prefix}led_on - Schaltet die LED ein" \
             f"\n{self.command_prefix}led_off - Schaltet die LED aus"
+            f"\n{self.command_prefix}coil_on - Schaltet das Schütz ein" \
+            f"\n{self.command_prefix}coil_off - Schaltet das Schütz aus"
             )
         else:
             logger.warning(f"Kanal {self.channel_id} nicht gefunden")
@@ -73,7 +99,19 @@ class DiscordBotHandler:
     async def notify_input_change(self, input_bit: int, state: bool):
         channel = self.channel or self.bot.get_channel(self.channel_id)
         if channel:
-            await channel.send(f"Digitaler Eingang {input_bit} hat sich geändert: {'AN' if state else 'AUS'}")
+            if input_bit == 0:  # Taster an Eingang 0
+                if self.previous_input_state is False and state is True:
+                    # Taster betätigt: LED toggeln
+                    self.led_state = not self.led_state
+                    result = await self.modbus_client.write_output(0, self.led_state)
+                    if result:
+                        await channel.send(f"LED {'eingeschaltet' if self.led_state else 'ausgeschaltet'} durch Taster!")
+                    else:
+                        await channel.send("Fehler beim Schalten der LED durch Taster.")
+                self.previous_input_state = state
+            else:
+                # Für andere Eingänge normale Nachricht
+                await channel.send(f"Digitaler Eingang {input_bit} hat sich geändert: {'AN' if state else 'AUS'}")
         else:
             logger.warning("Kein Kanal verfügbar für Input-Change-Benachrichtigung")
 

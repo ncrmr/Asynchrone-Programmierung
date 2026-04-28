@@ -107,25 +107,37 @@ class ModbusClient:
             self.connected = False
             return None
         
+    def _build_output_word(self) -> int:
+        value = 0
+        for bit, state in self.output_states.items():
+            if state:
+                value |= 1 << bit
+        return value
+
+    async def _write_output_word(self) -> bool:
+        address = self.output_base
+        value = self._build_output_word()
+        result = await asyncio.wait_for(
+            self.client.write_register(address=address, value=value, device_id=1),
+            timeout=5.0
+        )
+        if result.isError():
+            logger.error(f"Error writing outputs: {result}")
+            return False
+        return True
+
     async def write_output(self, output_bit: int = 0, val: bool = False):
-        # Write a single output state to Modbus client
+        # Update a single output state in the output image and write the full output word
         if not self.connected:
             logger.warning("Cannot write outputs - Modbus client not connected")
             return None
+
+        self.output_states[output_bit] = val
+
         try:
-            address = self.output_base + output_bit
-            value = 1 if val else 0
-            result = await asyncio.wait_for(
-                self.client.write_register(address=address, value=value, device_id=1),
-                timeout=5.0
-            )
-            if result.isError():
-                logger.error(f"Error writing outputs: {result}")
-                return None
-            
-            self.output_states[output_bit] = val  # Store the state
-            return True
-            
+            success = await self._write_output_word()
+            return success
+
         except asyncio.TimeoutError:
             logger.error("Timeout writing outputs")
             self.connected = False
@@ -159,11 +171,10 @@ class ModbusClient:
                             if self.input_change_callback:
                                 await self.input_change_callback(0, current_input)
                     
-                    # Write all stored output states cyclically to maintain them
-                    for bit, state in self.output_states.items():
-                        write_result = await self.write_output(bit, state)
-                        if write_result is None:
-                            logger.warning(f"Failed to maintain output {bit}")
+                    # Write the full output image cyclically to maintain all outputs
+                    write_result = await self._write_output_word()
+                    if not write_result:
+                        logger.warning("Failed to maintain output image")
                 
                 await asyncio.sleep(interval)
         
