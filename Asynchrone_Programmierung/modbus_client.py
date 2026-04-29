@@ -94,6 +94,8 @@ class ModbusClient:
 
     async def read_input(self, input_bit: int = 0):
         # Einen digitalen Eingang lesen.
+        # Vereinfachte Abfrage der Eingangskarte, hier wird nur das erste Bit gelesen. 
+        # Je nach Anwendungsfall könnte das erweitert werden. (siehe write_Output)
         if not self.connected:
             logger.warning("Cannot read inputs - Modbus client not connected")
             return None

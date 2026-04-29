@@ -1,3 +1,15 @@
 #################################################################
 # Logging Datei. Hier werden alle Log-Ausgaben des Programms gespeichert.
-#################################################################
+#################################################################2026-04-29 02:47:03,899 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-04-29 02:47:03,899 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-04-29 02:47:03,900 - __main__ - INFO - ============================================================
+2026-04-29 02:47:03,900 - __main__ - INFO - Starting Async Modbus-Discord Communication
+2026-04-29 02:47:03,901 - __main__ - INFO - ============================================================
+2026-04-29 02:47:03,901 - __main__ - INFO - All tasks started successfully
+2026-04-29 02:47:03,901 - __main__ - INFO - System running. Press Ctrl+C to stop.
+2026-04-29 02:47:03,901 - modbus_client - INFO - Attempting to reconnect to Modbus client...
+2026-04-29 02:47:03,901 - discord.client - INFO - logging in using static token
+2026-04-29 02:47:04,026 - modbus_client - INFO - Connected to Modbus client at 192.168.0.7:502
+2026-04-29 02:47:04,041 - modbus_client - INFO - Watchdog disabled
+2026-04-29 02:47:05,080 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: aa8dd0e57ef7c162cfb2b64fc9d9e59f).
+2026-04-29 02:47:07,098 - discord_bot - INFO - Der Bot ist jetzt online
