@@ -131,16 +131,26 @@ class ModbusClient:
         address = self.output_base
         # schreiben des Ausgangsabbildes
         value = self._build_output_word()
-        result = await asyncio.wait_for(
-            # Register der entsprechenden Ausgangskarte mit dem berechneten Wert beschreiben. Je nach Gerät könnte das anders sein.
-            self.client.write_register(address=address, value=value, device_id=1),
-            # Timeout, um zu verhindern, dass das Programm ewig hängt, wenn das Gerät nicht reagiert.
-            timeout=5.0
-        )
-        if result.isError():
-            logger.error(f"Error writing outputs: {result}")
-            return False
-        return True
+        try:
+            result = await asyncio.wait_for(
+                # Register der entsprechenden Ausgangskarte mit dem berechneten Wert beschreiben. Je nach Gerät könnte das anders sein.
+                self.client.write_register(address=address, value=value, device_id=1),
+                # Timeout, um zu verhindern, dass das Programm ewig hängt, wenn das Gerät nicht reagiert.
+                timeout=5.0
+            )
+            if result.isError():
+                logger.error(f"Error writing outputs: {result}")
+                return False
+            return True
+        
+        except asyncio.TimeoutError:
+            logger.error("Timeout writing outputs")
+            self.connected = False
+            return None
+        except Exception as err:
+            logger.error(f"Error writing outputs: {err}")
+            self.connected = False
+            return None
 
     async def write_output(self, output_bit: int = 0, val: bool = False):
         # Einen einzelnen Ausgang im Speicher setzen und dann die ganze Ausgabe schreiben.

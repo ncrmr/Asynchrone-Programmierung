@@ -112,36 +112,42 @@ class DiscordBotHandler:
 
     async def notify_input_change(self, input_bit: int, state: bool):
         # Diese Funktion wird vom Modbus-Client aufgerufen, wenn sich ein Eingang ändert.
-        channel = self.channel or self.bot.get_channel(self.channel_id)
-        if channel:
-            if input_bit == 0:
-                # Eingang 0 ist der Taster. Wir reagieren hier nur auf steigende Flanke.
-                if self.previous_input_state is False and state is True:
-                    self.led_state = not self.led_state
-                    # LED schalten und Ergebnis prüfen.
-                    result = await self.modbus_client.write_output(0, self.led_state)
-                    if result:
-                        await channel.send(
-                            f"LED {'eingeschaltet' if self.led_state else 'ausgeschaltet'} durch Taster!"
-                        )
-                    else:
-                        await channel.send("Fehler beim Schalten der LED durch Taster.")
-                # Zustand merken, damit wir das nächste Mal die Flanke erkennen.
-                self.previous_input_state = state
+        try:
+            channel = self.channel or self.bot.get_channel(self.channel_id)
+            if channel:
+                if input_bit == 0:
+                    # Eingang 0 ist der Taster. Wir reagieren hier nur auf steigende Flanke.
+                    if self.previous_input_state is False and state is True:
+                        self.led_state = not self.led_state
+                        # LED schalten und Ergebnis prüfen.
+                        result = await self.modbus_client.write_output(0, self.led_state)
+                        if result:
+                            await channel.send(
+                                f"LED {'eingeschaltet' if self.led_state else 'ausgeschaltet'} durch Taster!"
+                            )
+                        else:
+                            await channel.send("Fehler beim Schalten der LED durch Taster.")
+                    # Zustand merken, damit wir das nächste Mal die Flanke erkennen.
+                    self.previous_input_state = state
+                else:
+                    # Für andere Eingänge nur eine einfache Statusmeldung senden.
+                    await channel.send(
+                        f"Digitaler Eingang {input_bit} hat sich geändert: {'AN' if state else 'AUS'}"
+                    )
             else:
-                # Für andere Eingänge nur eine einfache Statusmeldung senden.
-                await channel.send(
-                    f"Digitaler Eingang {input_bit} hat sich geändert: {'AN' if state else 'AUS'}"
-                )
-        else:
-            logger.warning("Kein Kanal verfügbar für Input-Change-Benachrichtigung")
+                logger.warning("Kein Kanal verfügbar für Input-Change-Benachrichtigung")
+        except Exception as err:
+            logger.error(f"Error in notify_input_change: {err}")
 
     async def discord_bot_task(self):
         # Der Bot wird gestartet und läuft im eigenen asynchronen Kontext.
         # Kontext bedeutet hier die Umgebung, in der der Bot läuft. Das "async with" sorgt dafür, 
         # dass der Bot korrekt gestartet und gestoppt wird, auch wenn es zu Fehlern kommt.
-        async with self.bot:
-            await self.bot.start(self.token)
+        try:
+            async with self.bot:
+                await self.bot.start(self.token)
+        except Exception as err:
+            logger.error(f"Error in Discord bot task: {err}")
 
     async def stop(self):
         # Bot schließen, wenn das Programm beendet wird.
