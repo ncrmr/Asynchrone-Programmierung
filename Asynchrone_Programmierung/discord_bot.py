@@ -21,7 +21,7 @@ class DiscordBotHandler:
         # Zustand der LED, damit der Bot den aktuellen Status kennt.
         self.led_state = False
         # Vorheriger Eingangszustand, wichtig zum Erkennen von Flanken.
-        self.previous_input_state = None
+        self.previous_input_state = False
 
         # Discord-Intents definieren: hier brauchen wir Nachrichteninhalt.
         # Intents sind eine Art Berechtigung, die der Bot benötigt, um bestimmte Informationen von Discord zu erhalten.
