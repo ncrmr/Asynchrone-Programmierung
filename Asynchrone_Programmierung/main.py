@@ -47,7 +47,9 @@ class AsyncSystem:
         self.tasks = []
         self.running = False
 
-    async def run(self):
+    # Unterschied zwischen async def und def: async def definiert eine asynchrone Funktion, 
+    # die pausieren kann ohne das ganze Programm zu blockieren. Aufruf mit await
+    async def run(self):  # Hauptfunktion, die das gesamte System startet.
         # Systemstart melden.
         logger.info("=" * 60)
         logger.info("Starting Async Modbus-Discord Communication")
